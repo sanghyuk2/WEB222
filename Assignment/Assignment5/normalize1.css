@@ -1,0 +1,140 @@
+/*make background-color of the header and font color*/
+header {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background-color:#9ee06b;
+    border: 2px #74a34f solid;
+    border-radius: 5px;
+    color: #FFFFFF;
+    width:fit-content;
+    line-height: 70px;
+    text-align: center;
+    margin: 0 auto;
+ }
+ 
+ /*remove margin*/
+ #head h1{
+    margin: 0;
+ }
+ 
+ /*main part's height and max-width. */
+ div.main{
+    height: 450px;
+    max-width: 1200px;
+    margin: 0px auto;
+ }
+ 
+ /*main content's width and scroll function if the have exceeded content.*/
+ div.main-content {
+    width: 59%;
+    overflow: auto;
+    height: 450px;
+    background-color:#ecffdd;
+    border: 1px #acb2a7 solid;
+    float: left;
+    font-size: 18px;
+    box-sizing: border-box;
+ }
+ 
+ /*make the border into the box by using box-sizing*/
+ div.main-content input, div.main-content select{
+    height: 20px;
+    width: 200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+ }
+ 
+ /*make the border red, When the input is invalid*/
+ input:focus:invalid {
+    border: 2px solid red;
+ }
+ 
+ 
+ /*submit and reset buttons to be center*/
+ div.button {
+    width: fit-content;
+    margin: 10px auto;
+ }
+ 
+ p{
+    padding: 5px;
+ }
+ 
+ /*make the body background-color*/
+ body {
+    background-color:#f5f0a8;
+ }
+
+ /*width of side panel and back ground color*/
+ div.side {
+    background-color: #ecffdd;
+    width: 19.501%;
+    min-height: 300px;
+    border: 1px #acb2a7 solid;
+    float: left;
+    box-sizing: border-box;
+
+ }
+ 
+ 
+ /*width of navigation and back ground color*/
+ nav {
+    background-color: #ecffdd;
+    width: 21%;
+    min-height: 450px;
+    border: 1px #acb2a7 solid;
+    float:left;
+    font-size: 20px;
+    box-sizing: border-box;
+
+ }
+
+ nav h3 {
+    text-align: center;
+ }
+ 
+  
+ /*remove the underline of links*/
+ nav ul a {
+    text-decoration: none;   
+ }
+
+/*After visiting, the color will not be changed*/ 
+nav ul a:visited {
+    color: black;
+ }
+ 
+ /*padding for list*/
+ li{
+    padding: 5px;
+ }
+
+ /*Make footer be center*/
+footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 15px;
+ }
+ 
+ /*Make text inside of the footer to be center, and change the background color*/
+ footer div.footer {
+    background-color: #9ee06b;
+    height: 30px;
+    width:100%;
+    float:left;
+    text-align: left;
+    border: 2px #74a34f solid;
+ 
+ }
+
+footer div.footer p {
+    margin: auto;
+ }
+
+ /*button size*/
+ #submit, #reset{
+    margin: 1px auto;
+    width: 100px;
+ }

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Lee's Web</title>
+        <!--including css and js-->
+        <link rel="stylesheet" href="normalize1.css" />
+        <script src="registration.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="head">
+                
+                <h1 class="name">
+                        <img src="smile.jpg" alt="logo" width="35" height="35">WEB222 Assignment5
+                </h1>
+            </div>
+        </header>
+        <div class = "main">
+            <nav>
+                <h3 style="color:#7fa85e" >Menu</h3>
+                <ul>
+                    <li><a href="index.html" style="color:#7fa85e">Welcome</a></li>
+                    <li><a href="registration.html" style ="color:#7fa85e">Registration</a></li>
+                </ul>
+            </nav>
+            <!--Main contents-->
+            <div class="main-content">
+                <!--Form Start-->
+                <form id="signup" name="signup" method="POST" action="https://httpbin.org/post" onsubmit="return formValidation()">
+                    <!--Based on the input we type, it will call the function named valid()-->
+                    <h4>User Name</h4>
+                    <span>First Name: </span><br><input onkeyup="valid()" type="text" name="fname" tabindex="1" required><br>
+                    <span>Last Name: </span><br><input onkeyup="valid()" type="text" name="lname" tabindex="2" required><br>
+                    <h4>Shipping Address</h4>
+                    <span>Unit#: </span><br><input onkeyup="valid()" type="text" name="unitNo" tabindex="3" required><br>
+                    <span>Street#: </span><br><input onkeyup="valid()" type="text" name="streetNo" tabindex="4" required><br>
+                    <!--No digit, more than one letter-->
+                    <span>Street Name: </span><br><input onkeyup="valid()" pattern="[^0-9]{1,}" type="text" name="streetName" tabindex="5" required><br>
+                    <!--Allows letters and space-->
+                    <span>City: </span><br><input onkeyup="valid()" pattern="[A-Za-z ]{1,}" type="text" name="city" tabindex="6" required><br>
+                    <span>Province: </span><br>
+                    <!--choose the province listed. Ontario is default value-->
+                    <select name="province" tabindex="7">
+                        <option value="AB">Alberta</option>
+                        <option value="BC">British Columbia</option>
+                        <option value="MB">Manitoba</option>
+                        <option value="NB">New Brunswick</option>
+                        <option value="NL">Newfoundland and Labrador</option>
+                        <option value="NS">Nova Scotia</option>
+                        <option value="PE">Prince Edward Island</option>
+                        <option value="ON" selected>Ontario</option>
+                        <option value="QC">Quebec</option>
+                        <option value="SK">Saskatchewan</option>
+                    </select>
+                    <br>
+                    <!--Letter Digit Letter Digit Letter Digit-->
+                    <span>Postal Code: </span><br><input onkeyup="valid()" pattern="[A-Za-z][0-9][A-Za-z][0-9][A-Za-z][0-9]" type="text" name="postCd" tabindex="8" placeholder="C1A1A7" required><br>
+                    <h4>Account Information</h4>
+                    <!--the input box will show up the example written in placeholder part. This pattern allows ###-###-####-->
+                    <span>Phone#: </span><br><input onkeyup="valid()" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="tel" name="phoneNo" tabindex="9" placeholder="xxx-xxx-xxxx"required><br>
+                    <!--email pattern-->
+                    <span>Email: </span><br><input onkeyup="valid()" type="email" name="email" tabindex="10" required><br>
+                    <!--username should start with letter and length should be more than 6-->
+                    <span>User Name: </span><br><input onkeyup="valid()" pattern="[A-Za-z].{5,}" type="text" name="userName" tabindex="11" required><br>
+                    <!--No pattern here-->
+                    <span>Password: </span><br><input onkeyup="valid()" id="passwd" type="password" name="passwd" tabindex="12" required><br>
+                    <span>Password Confirm: </span><br><input onkeyup="valid()" id="rePasswd" type="password" name="rePasswd" tabindex="13" required><br>
+                    <input type="hidden" name="lastName" id="lastName" value="Lee">
+                    <input type="hidden" name="studentId" id="studentId" value="129405171">
+                    <div class="button">
+                        <input id="submit" type="submit" value="Submit" tabindex="14">
+                        <input id="reset" type="reset" tabindex="15">
+                    </div>
+                </form>
+            </div>
+            <!--when the error message shows up, it shows in the form of the red letter-->
+            <div class="side" style="color:red">
+            </div>
+        </div>
+        <footer>
+            <div class="footer">
+                <p>&copy; SANGHYUK LEE</p>
+            </div>
+        </footer>
+    </body>
+</html>
